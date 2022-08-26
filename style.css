@@ -1,0 +1,184 @@
+body {
+    background-image: url("https://images.unsplash.com/photo-1567636788276-40a47795ba4d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1548&q=80");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-color:rgba(36, 80, 76, 0.9);
+  }
+  
+
+#container {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(36, 80, 76, 0.9);
+  width: 420px;
+  padding: 70px;
+  border-radius: 50% 20% / 10% 40%;
+  margin-top: 100px;
+  margin-left: 100px;
+}
+
+h1 {
+  font-family: 'Exo 2', sans-serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 30px;
+  color: #FFF9B2;
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+p {
+  font-family: 'Exo 2', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  color: #f2f39f;
+}
+
+#room , #food, #days, #adults, #kids, option {
+  font-family: 'Exo 2', sans-serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 14px;
+  background-color: #f5e5d0;
+  color: rgb(5, 35, 117);
+}
+
+
+option {
+  color: rgba(5, 35, 117, 0.781);
+}
+
+#days, #adults, #kids, select {
+  border-radius: 5px;
+  border: 1px solid rgba(36, 80, 45, 0.9);;
+  padding: 3px;
+}
+
+#days {
+  width: 120px;
+}
+
+/* цвет placeholder */
+input::-webkit-input-placeholder {
+  font-family: 'Exo 2', sans-serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 14px;
+  color: rgba(5, 35, 117, 0.89);
+}
+
+
+#adults, #kids {
+  width: 50px;
+  margin-left: 10px;
+}
+
+#text {
+  font-family: 'Exo 2', sans-serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 16px;
+  color: rgb(247, 184, 113);
+  margin-bottom: -15px;
+}
+
+#smallText {
+  font-family: 'Exo 2', sans-serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: smaller;
+  color:#f2f39f;
+}
+
+#addFood {
+  background-color: #f5e5d0;
+  border-radius: 5px;
+  font-family: 'Exo 2', sans-serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 15px;
+  width: 100px;
+  padding: 7px;
+  color: #d46363;
+  border: 1px solid rgba(36, 80, 45, 0.9);
+}
+
+#food {
+  display: none;
+  margin-top: -20px;
+}
+
+#calculateBTN {
+  background-color: #d46363;
+  border-radius: 20px;
+  font-family: 'Exo 2', sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  text-transform: uppercase;
+  padding: 7px;
+  color: #f2f39f;
+  border: 1px solid rgba(36, 80, 45, 0.9);
+}
+
+#showTotalAmountToPay {
+  font-family: 'Exo 2', sans-serif;
+  font-style: italic;
+  font-weight: 400;
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+#living, #restaurant, #totalAmount {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  background-color: #f2f39f;
+  border-radius: 50% 20% / 10% 40%;
+  padding: 20px;
+  margin: 10px;
+  width: 180px;
+}
+
+#totalAmount {
+  font-weight: bold;
+  color: #d46363;;
+}
+
+@media all and (max-width: 800px) {
+  #container {
+    margin-top: 30px;
+  }
+}
+
+@media all and (max-width: 500px) {
+  #container {
+    margin-top: 50px;
+    margin-left: 10px;
+    width: 276px;
+    padding: 33px;
+    border-radius: 15px 100px 100px 100px;
+  }
+
+  #text {
+    font-size: 15px;
+  }
+
+  #showTotalAmountToPay {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  }
+
+  #living, #restaurant, #totalAmount {
+    text-align: center;
+  }
+}

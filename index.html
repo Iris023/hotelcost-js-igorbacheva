@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Загородный отель</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital@1&display=swap" rel="stylesheet">
+</head>
+<body>
+    <audio id="myAudio" autoplay="allowed" src="monetyzvuk.mp3"></audio>
+
+    <div id="container">
+        <h1>Сколько будет стоить проживание в нашем отеле?</h1>
+        <form>
+            <p>Выберите категорию номера</p>
+            <select id="room">
+                <option disabled selected value="">Выберите номер</option>
+                <option value="5500">Семейный большой номер - 5500р./сутки</option>
+                <option value="4000">Номер люкс (не более 2 взрослых) - 4000р./сутки</option>
+                <option value="3000">Номер стандарт (не более 2 взрослых) - 3000р./сутки</option>
+                <option value="2500">Номер на 1 человека - 2500р./сутки</option>
+            </select>
+            <br>
+            <p>На какой срок планируется отдых?</p>
+            <input type="number" id="days" placeholder="Кол-во дней"> 
+            <br>
+            <p>Укажите количество человек</p>
+            <span id="text">Взрослых (14лет и старше):
+                <input type="number" id="adults">
+            </span> <br>
+            <span id="text">Детей от 3 до 14 лет:
+                <input type="number" id="kids">
+            </span> <br>
+            <span id="smallText">Дети до 3 лет бесплатно</span>
+            <br>
+            <p>Выберите тип питания в нашем ресторане</p>
+            <button id="addFood">Выбрать</button> <br>
+            <select id="food">
+                <option value="1500">Всё включено - 1500р./чел</option>
+                <option value="1100">Завтрак + обед + ужин (без напитков) - 1100р./чел</option>
+                <option value="800">Завтрак + на выбор обед или ужин - 800р./чел</option>
+                <option value="0" selected>Только завтраки - входит в стоимость проживания</option>
+            </select> 
+            <br>
+            <span id="smallText">Детям от 3 до 14 лет скидка 50%</span>
+
+            <hr>
+            <button id="calculateBTN">Рассчитать</button>
+            </form>
+
+        <div id="showTotalAmountToPay">
+            <div id="living">
+                <span>Проживание</span>
+                <span id="rub">₽<span id="roomAmount"></span></span>
+                <span>за номер</span>
+            </div>
+            <div id="restaurant">
+                <span>Питание</span>
+                <span id="rub">₽<span id="restaurantTotal"></span></span>
+                <span>на всех</span>
+            </div>
+            <div id="totalAmount">
+                <span>ВСЕГО</span>
+                <span id="rub">₽<span id="totalSum"></span></span>
+            </div>
+        </div>
+        
+    </div>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="script.js"></script>
+</body>
+</html>
