@@ -17,7 +17,7 @@ function calculateAmount(e) {
   const adults = document.querySelector("#adults").value;
   const kids = document.querySelector("#kids").value;
   const foodPerPerson = document.querySelector("#food").value;
-
+  
   if (roomCost === "" || adults === "" || isNaN(adults) || isNaN(days) || isNaN(kids)) {
     Swal.fire({
       icon: 'error',
@@ -68,6 +68,7 @@ function calculateAmount(e) {
 
   else {
     document.querySelector('#myAudio').play();
+    document.querySelector('#showTotalAmountToPay').style.display = "flex";
     const costForLiving = roomCost * days;
     const foodForAllPeople = (foodPerPerson * adults * days) + (0.5 * foodPerPerson * kids * days);
     const totalSum = costForLiving + foodForAllPeople;

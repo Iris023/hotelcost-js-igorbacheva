@@ -64,7 +64,6 @@ option {
   width: 120px;
 }
 
-/* цвет placeholder */
 input::-webkit-input-placeholder {
   font-family: 'Exo 2', sans-serif;
   font-style: italic;
@@ -131,7 +130,7 @@ input::-webkit-input-placeholder {
   font-style: italic;
   font-weight: 400;
   margin-top: 50px;
-  display: flex;
+  display: none;
   justify-content: center;
 }
 
@@ -153,17 +152,25 @@ input::-webkit-input-placeholder {
   color: #d46363;;
 }
 
-@media all and (max-width: 800px) {
+@media all and (max-width: 900px) {
   #container {
     margin-top: 30px;
+    margin-left: 30px;
+    width: 70%;
   }
 }
 
-@media all and (max-width: 500px) {
+@media all and (max-width: 750px) {
+  #container {
+    margin-left: 15px;
+  }
+}
+
+@media all and (max-width: 600px) {
   #container {
     margin-top: 50px;
     margin-left: 10px;
-    width: 276px;
+    width: 85%;
     padding: 33px;
     border-radius: 15px 100px 100px 100px;
   }
@@ -172,10 +179,35 @@ input::-webkit-input-placeholder {
     font-size: 15px;
   }
 
+
+  .swal2-container.swal2-center>.swal2-popup {
+    width: 80%;
+}
+
+.swal2-title {
+  font-size: 23px !important;
+}
+
+.swal2-html-container {
+  font-size: 16px !important;
+}
+
+}
+
+@media all and (max-width: 500px) {
+  #container {
+    width: 82%;
+    margin-left: 5px;
+  }
+
+  h1 {
+    font-size: 25px;
+  }
+
   #showTotalAmountToPay {
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 
   #living, #restaurant, #totalAmount {
