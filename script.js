@@ -17,7 +17,8 @@ function calculateAmount(e) {
   const adults = document.querySelector("#adults").value;
   const kids = document.querySelector("#kids").value;
   const foodPerPerson = document.querySelector("#food").value;
-  
+  console.log(kids);
+
   if (roomCost === "" || adults === "" || isNaN(adults) || isNaN(days) || isNaN(kids)) {
     Swal.fire({
       icon: 'error',
@@ -29,8 +30,8 @@ function calculateAmount(e) {
   else if (room.options.selectedIndex == 1 && (adults < 1 || adults > 4)) {
     Swal.fire({
       icon: 'error',
-      title: 'В этом номере может проживать от 1 до 4 взрослых',
-      text: 'Если в Вашей компании более 4 взрослых - оформите несколько бронирований'
+      title: 'В этом номере может проживать от 1 до 4 взрослых и не более 2 детей 3-14 лет',
+      text: 'Если Ваша компания больше - тогда оформите несколько бронирований'
     })
   }
 
@@ -38,7 +39,15 @@ function calculateAmount(e) {
     Swal.fire({
       icon: 'error',
       title: 'Неверно введено кол-во людей!',
-      text: 'Слишком много взрослых проживающих для этого номера'
+      text: 'В данном номере может проживать не более 2 взрослых и не более 1 ребенка 3-14 лет одновременно'
+    })
+  }
+
+  else if (room.options.selectedIndex == 2 && kids > 1)  {
+    Swal.fire({
+      icon: 'error',
+      title: 'Неверно введено кол-во детей',
+      text: 'В данном номере не предусмотрено проживание более 1 ребенка 3-14 лет'
     })
   }
 
@@ -46,15 +55,31 @@ function calculateAmount(e) {
     Swal.fire({
       icon: 'error',
       title: 'Неверно введено кол-во людей!',
-      text: 'Слишком много взрослых проживающих для этого номера'
+      text: 'В данном номере может проживать не более 2 взрослых'
     })
   }
 
-  else if (room.options.selectedIndex == 4 && adults > 1) {
+  else if (room.options.selectedIndex == 3 && kids > 0)  {
+    Swal.fire({
+      icon: 'error',
+      title: 'Неверно введено кол-во детей',
+      text: 'Эта категория номера не предусматривает проживание с детьми старше 3 лет'
+    })
+  }
+
+  else if (room.options.selectedIndex == 4 && adults > 1 )  {
     Swal.fire({
       icon: 'error',
       title: 'Неверно введено кол-во людей!',
-      text: 'Слишком много взрослых проживающих для этого номера'
+      text: 'В данном номере может проживать только один взрослый человек'
+    })
+  }
+
+  else if (room.options.selectedIndex == 4 && kids > 0)  {
+    Swal.fire({
+      icon: 'error',
+      title: 'Номер не предусмотрен для проживания детей 3-14 лет!',
+      text: 'В данном номере может проживать только один взрослый человек'
     })
   }
 
@@ -63,6 +88,14 @@ function calculateAmount(e) {
       icon: 'error',
       title: 'Неверно введено кол-во дней!',
       text: 'Расситать стоимость проживания можно от 1 до 30 дней'
+    })
+  }
+
+  else if (kids > 2) {
+    Swal.fire({
+      icon: 'error',
+      title: 'Неверно введено кол-во детей!',
+      text: 'Не более двух детей 3-14 лет'
     })
   }
 
