@@ -17,7 +17,6 @@ function calculateAmount(e) {
   const adults = document.querySelector("#adults").value;
   const kids = document.querySelector("#kids").value;
   const foodPerPerson = document.querySelector("#food").value;
-  console.log(kids);
 
   if (roomCost === "" || adults === "" || isNaN(adults) || isNaN(days) || isNaN(kids)) {
     Swal.fire({
