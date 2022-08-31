@@ -184,7 +184,7 @@ input::-webkit-input-placeholder {
 }
 
 @media all and (max-width: 500px) {
-  #container {
+  .container {
     width: 75%;
     padding: 30px;
     border-radius: 10%;
