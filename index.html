@@ -13,61 +13,61 @@
 <body>
     <audio id="myAudio" autoplay="allowed" src="monetyzvuk.mp3"></audio>
 
-    <div id="container">
-        <h1>Сколько будет стоить проживание в нашем отеле?</h1>
-        <form>
-            <p>Выберите категорию номера</p>
-            <select id="room">
-                <option disabled selected value="">Выберите номер</option>
-                <option value="5500">Семейный большой номер - 5500р./сутки</option>
-                <option value="4000">Номер люкс (не более 2 взрослых) - 4000р./сутки</option>
-                <option value="3000">Номер стандарт (не более 2 взрослых) - 3000р./сутки</option>
-                <option value="2500">Номер на 1 человека - 2500р./сутки</option>
-            </select>
-            <br>
-            <p>На какой срок планируется отдых?</p>
-            <input type="number" id="days" placeholder="Кол-во дней"> 
-            <br>
-            <p>Укажите количество человек</p>
-            <span id="text">Взрослых (14лет и старше):
-                <input type="number" id="adults">
-            </span> <br>
-            <span id="text">Детей от 3 до 14 лет:
-                <input type="number" id="kids">
-            </span> <br>
-            <span id="smallText">Дети до 3 лет бесплатно</span>
-            <br>
-            <p>Выберите тип питания в нашем ресторане</p>
-            <button id="addFood">Выбрать</button> <br>
-            <select id="food">
-                <option value="1500">Всё включено - 1500р./чел</option>
-                <option value="1100">Завтрак + обед + ужин (без напитков) - 1100р./чел</option>
-                <option value="800">Завтрак + на выбор обед или ужин - 800р./чел</option>
-                <option value="0" selected>Только завтраки - входит в стоимость проживания</option>
-            </select> 
-            <br>
-            <span id="smallText">Детям от 3 до 14 лет скидка 50%</span>
+    <div class="mainDiv">
+        <div class="container">
+            <h1>Сколько будет стоить проживание в нашем отеле?</h1>
+            <form>
+                <p>Выберите категорию номера</p>
+                <select id="room">
+                    <option disabled selected value="">Выберите номер</option>
+                    <option value="5500">Семейный большой номер - 5500р./сутки</option>
+                    <option value="4000">Номер люкс (не более 2 взрослых) - 4000р./сутки</option>
+                    <option value="3000">Номер стандарт (не более 2 взрослых) - 3000р./сутки</option>
+                    <option value="2500">Номер на 1 человека - 2500р./сутки</option>
+                </select>
+                <br>
+                <p>На какой срок планируется отдых?</p>
+                <input type="number" id="days" placeholder="Кол-во дней"> 
+                <br>
+                <p>Укажите количество человек</p>
+                <span id="text">Взрослых (14лет и старше):
+                    <input type="number" id="adults">
+                </span> <br>
+                <span id="text">Детей от 3 до 14 лет:
+                    <input type="number" id="kids">
+                </span> <br>
+                <span id="smallText">Дети до 3 лет бесплатно</span>
+                <br>
+                <p>Выберите тип питания в нашем ресторане</p>
+                <button id="addFood">Выбрать</button> <br>
+                <select id="food">
+                    <option value="1500">Всё включено - 1500р./чел</option>
+                    <option value="1100">Завтрак + обед + ужин (без напитков) - 1100р./чел</option>
+                    <option value="800">Завтрак + на выбор обед или ужин - 800р./чел</option>
+                    <option value="0" selected>Только завтраки - входит в стоимость проживания</option>
+                </select> 
+                <br>
+                <span id="smallText">Детям от 3 до 14 лет скидка 50%</span>
 
-            <hr>
-            <button id="calculateBTN">Рассчитать</button>
-            </form>
+                <button id="calculateBTN">Рассчитать</button>
+                </form>
 
-        <div id="showTotalAmountToPay">
-            <div id="living">
-                <span>Проживание</span>
-                <span id="rub">₽<span id="roomAmount"></span></span>
-                <span>за номер</span>
+            <div id="showTotalAmountToPay">
+                <div id="living">
+                    <span>Проживание</span>
+                    <span id="rub">₽<span id="roomAmount"></span></span>
+                    <span>за номер</span>
+                </div>
+                <div id="restaurant">
+                    <span>Питание</span>
+                    <span id="rub">₽<span id="restaurantTotal"></span></span>
+                    <span>на всех</span>
+                </div>
+                <div id="totalAmount">
+                    <span>ВСЕГО</span>
+                    <span id="rub">₽<span id="totalSum"></span></span>
+                </div>
             </div>
-            <div id="restaurant">
-                <span>Питание</span>
-                <span id="rub">₽<span id="restaurantTotal"></span></span>
-                <span>на всех</span>
-            </div>
-            <div id="totalAmount">
-                <span>ВСЕГО</span>
-                <span id="rub">₽<span id="totalSum"></span></span>
-            </div>
-        </div>
         
     </div>
 
